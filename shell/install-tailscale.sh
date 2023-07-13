@@ -22,7 +22,7 @@ LimitMEMLOCK=infinity
 User=root
 Group=root
 Type=simple
-ExecStart=doppler run --command 'sudo /usr/local/bin/tailscale up -authkey $TAILSCALE_AUTH_KEY'
+ExecStart=doppler run --command 'sudo /usr/local/bin/tailscale up -authkey $TAILSCALE_TOKEN'
 ExecStopPost=/usr/local/bin/tailscale down
 Restart=on-failure
 
